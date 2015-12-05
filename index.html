@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="CS109">
+    <meta name="author" content="Mario Salgado">
+    <title>Final Project - CS109</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+    <script>
+        $(document).ready(function() {
+    
+        });        
+    </script>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="github.html">Github</a></li>
+                <li><a href="ipython.html">iPython</a></li>
+                <li><a href="team.html">Team</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Predicting Side Effects from Online Media</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/r24HIRHTgVo"></iframe>
+                </div>
+            </div>
+        </div>  
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="page-header">Motivation</h2>
+                <p>Every year, commonly available medication is withdrawn from the market due to safety concerns.
+From the market withdrawal of Thalidomide (a sedative causing foetal malformation) in the early 60s, to the withdrawal of Vioxx (a painkiller causing heart-attacks and strokes, marketed for 5 years) in the mid 00s, the need for withdrawal of marketed medication constitutes an important health hazard.</p>
+<p>In order to gain marketing authorization for clinically approved medical products, pharmaceutical companies should demonstrate the capability to gather post-marketing reports of side effects through local country offices and telephone hotlines.  With the widespread use of social media, the tendency to report side effects to the general public has risen tremendously.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="page-header">Data and Analysis</h2>
+                <p>Our analysis will include the following data sources:</p>
+                <dl>
+                    <dt>1. Pharmaceuticals</dt>
+                    <dd>
+                        <ul>
+                            <li>20 pharmaceuticals from the withdrawals list at the US FDA Drug Authority <a href="http://www.fda.gov/Drugs/DrugSafety/DrugRecalls/default.htm">http://www.fda.gov/Drugs/DrugSafety/DrugRecalls/default.htm</a> . In particular, we’ll be looking at drug name, drug name synonyms to create our Boolean queries and withdrawal date for our timeframes.</li>
+                            <li>20 drugs as a control set which are similar to those drugs, but have not been withdrawn.</li>
+                        </ul>
+                    </dd>
+                    <dt>2. Known lists of side effects for our “truth” set</dt>
+                    <dd class="m10bottom"> <a href="http://www.drugs.com/sfx/">http://www.drugs.com/sfx/</a> SPEC: Drug name and side effect will be used to build the truth set.</dd>
+                    <dt>3. Media data</dt>
+                    <dd>We’ll be searching an archive of millions of postings per day for the Boolean queries outlined in #2.  In the archive, we have a collection of 500,000 forums, blogs, local and national news and consumer reviews and social media.</dd>
+                </dl>
+                <div class="alert alert-info" role="alert">
+                  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                  Our whole data set can be downloaded from this <a href="#">link</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="page-header">What we discovered</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <div class='tableauPlaceholder' style='width: 982px; height: 742px;'>
+                    <noscript><a href='#'>
+                        <img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;se&#47;seattle_4&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a>
+                    </noscript>
+                    <object class='tableauViz' width='982' height='742' style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                        <param name='site_root' value='' />
+                        <param name='name' value='seattle_4&#47;Dashboard1' />
+                        <param name='tabs' value='no' />
+                        <param name='toolbar' value='yes' />
+                        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;se&#47;seattle_4&#47;Dashboard1&#47;1.png' /> 
+                        <param name='animate_transition' value='yes' />
+                        <param name='display_static_image' value='yes' />
+                        <param name='display_spinner' value='yes' />
+                        <param name='display_overlay' value='yes' />
+                        <param name='display_count' value='yes' />
+                        <param name='showVizHome' value='no' />
+                        <param name='showTabs' value='y' />
+                        <param name='bootstrapWhenNotified' value='true' />
+                    </object>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="page-header">Conclusion</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <ol>
+                    <li>Conclusion #1</li>
+                    <li>Conclusion #2</li>
+                    <li>Conclusion #3</li>
+                    <li>Conclusion #4</li>
+                </ol>
+            </div>
+        </div>
+
+
+
+    </div><!-- container -->
+</section>
+<hr>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="text-center">CS109 - Global Analytics 2015</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<br>
+</body>
+</html>

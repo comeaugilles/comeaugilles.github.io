@@ -1,0 +1,23 @@
+.container{
+  margin: 0 auto;
+  max-width: 1000px; 
+}
+
+.m10bottom{
+	margin-bottom: 10px;
+}
+
+.photo{
+    height: 300px !important;
+    width: 300px !important;
+    display: block !important;
+}
+
+.iframe_ipython{
+	width: 1000px;
+	height: 780px;
+}
+
+.p15 {
+    padding: 15px;
+}
