@@ -34,54 +34,113 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1>Predicting Side Effects from Online Media</h1>
+                <h1>Can we discover new drugs side effects from Social Media?</h1>
             </div>
         </div>
 
         <div class="row">
             <div class="col-xs-12">
                 <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/r24HIRHTgVo"></iframe>
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/GiQ1SQWtLfo"></iframe>
                 </div>
             </div>
         </div>  
         <div class="row">
             <div class="col-xs-12">
-                <h2 class="page-header">Motivation</h2>
+                <h2 class="page-header">Our Motivation</h2>
                 <p>Every year, commonly available medication is withdrawn from the market due to safety concerns.
-From the market withdrawal of Thalidomide (a sedative causing foetal malformation) in the early 60s, to the withdrawal of Vioxx (a painkiller causing heart-attacks and strokes, marketed for 5 years) in the mid 00s, the need for withdrawal of marketed medication constitutes an important health hazard.</p>
-<p>In order to gain marketing authorization for clinically approved medical products, pharmaceutical companies should demonstrate the capability to gather post-marketing reports of side effects through local country offices and telephone hotlines.  With the widespread use of social media, the tendency to report side effects to the general public has risen tremendously.</p>
+                From the market withdrawal of Thalidomide (a sedative causing foetal malformation) in the early 60s, to the withdrawal of Vioxx (a painkiller causing heart-attacks and strokes, marketed for 5 years) in the mid 00s, the need for withdrawal of marketed medication constitutes an important health hazard.</p>
+                <p>In order to gain marketing authorization for clinically approved medical products, pharmaceutical companies should demonstrate the capability to gather post-marketing reports of side effects through local country offices and telephone hotlines. With the widespread use of social media, the tendency to report side effects to the general public has risen tremendously.</p>
+                <p>So we started to wonder: what if we have tons of social media posts and data, and we run some data analysis ... could we get some new side effects that the pharmaceuticals aren't aware of ?</p>
             </div>
         </div>
 
         <div class="row">
             <div class="col-xs-12">
-                <h2 class="page-header">Data and Analysis</h2>
-                <p>Our analysis will include the following data sources:</p>
-                <dl>
-                    <dt>1. Pharmaceuticals</dt>
-                    <dd>
-                        <ul>
-                            <li>20 pharmaceuticals from the withdrawals list at the US FDA Drug Authority <a href="http://www.fda.gov/Drugs/DrugSafety/DrugRecalls/default.htm">http://www.fda.gov/Drugs/DrugSafety/DrugRecalls/default.htm</a> . In particular, we’ll be looking at drug name, drug name synonyms to create our Boolean queries and withdrawal date for our timeframes.</li>
-                            <li>20 drugs as a control set which are similar to those drugs, but have not been withdrawn.</li>
-                        </ul>
-                    </dd>
-                    <dt>2. Known lists of side effects for our “truth” set</dt>
-                    <dd class="m10bottom"> <a href="http://www.drugs.com/sfx/">http://www.drugs.com/sfx/</a> SPEC: Drug name and side effect will be used to build the truth set.</dd>
-                    <dt>3. Media data</dt>
-                    <dd>We’ll be searching an archive of millions of postings per day for the Boolean queries outlined in #2.  In the archive, we have a collection of 500,000 forums, blogs, local and national news and consumer reviews and social media.</dd>
-                </dl>
-                <div class="alert alert-info" role="alert">
+                <h2 class="page-header">Diving into Data</h2>
+                <p>We had some awesome data to use:</p>
+                <ol>
+                    <li>Postings from Online Media about our chosen pharmaceuticals</li>
+                    <li>Pharmaceuticals with past investigations</li>
+                    <li>And a list of known adverse effects</li>
+                </ol>
+                <br />
+                <p>And our data came from all over the world ...</p>
+                <img src="images/worldmap_posts.png" alt="" />
+                <br />
+                <p>So the question was: which drugs should we investigate?. Well, we took the top 300 drugs named on postings having the words "adverse effects" or "side effects" in their post. After having a look at them we came up with our very own top 22:</p>
+                <ul>
+                    <li>MYRBETRIQ</li>
+                    <li>PROPRANOLOL</li>
+                    <li>EFFEXOR</li>
+                    <li>ZOCOR</li>
+                    <li>BENICAR</li>
+                    <li>LEVAQUIN</li>
+                    <li><strong>XARELTO</strong></li>
+                    <li>MIRENA</li>
+                    <li>OLANZAPINE</li>
+                    <li>HARVONI</li>
+                    <li>TRAZODONE</li>
+                    <li>WELLBUTRIN</li>
+                    <li>INVOKANA</li>
+                    <li>RISPERIDONE</li>
+                    <li>CELEXA</li>
+                    <li>LEXAPRO</li>
+                    <li>FINASTERIDE</li>
+                    <li>ELIQUIS</li>
+                    <li>FLUOXETINE</li>
+                    <li>PREDNISONE</li>
+                    <li><strong>RISPERDAL</strong></li>
+                    <li>NAPROXEN</li>
+                </ul>
+                <p>As you can see, it's a short list, and in it we have hightlighted 2 drugs. Bear them in mind for a little while, we will shortly talk about them.</p>
+
+<!--                 <div class="alert alert-info" role="alert">
                   <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                   Our whole data set can be downloaded from this <a href="#">link</a>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <h2 class="page-header">What we discovered</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                <div class='tableauPlaceholder' style='width: 982px; height: 742px;'>
+                <h2 class="page-header">Data Analysis: making sense of all the data we got!</h2>
+                <p>We used 2 techniques for our analysis: </p>
+                <ol>
+                    <li>Word Categorization (LDA)</li>
+                    <li>Comparing listed effects vs reported effects</li>
+                </ol>
+                <br />
+                <p><strong>Word Categorization (LDA)</strong></p>
+                 <p>In our first approach, we tried to see if we could dig into social media data and find what were the most common side effects for a group of specifics drugs. </p><p>Sadly, this approach didn´t work so well, so we did a little literature review about it and we found that there were 3 major articles published about side effects, and they used different techniques:</p>
+                 <ul>
+                    <li>Lexicon-method</li>
+                    <li>machine learning</li>
+                    <li>association rule mining</li>
+                </ul>
+                <p>So as you can see, neither of them used LDA for this kind of investigation, and we believe that detection of side effects from social media is a young branch of data science, and sometimes when you try something new you won't get the best answer right away.</p>
+                <br />
+                <p><strong>Comparing listed effects vs reported effects</strong></p>
+                <p>Now, after doing Word Categorization, we started to compare our listed side effects from FDA and other pharmaceutical associations and what we found in social media posts</p>
+                <p>We didn't have the time to do ech of the 22 drugs listed before, so we picked 2:</p>
+                <ul>
+                    <li>Xarelto</li>
+                    <li>Risperdal</li>
+                </ul>
+
+                <p><strong>Xarelto</strong></p>
+                <p>Xarelto (rivaroxaban) is an anticoagulant (blood thinner) that prevents the formation of blood clots. Xarelto is used to prevent or treat a type of blood clot called deep vein thrombosis (DVT), which can lead to blood clots in the lungs (pulmonary embolism). A DVT can occur after certain types of surgery.</p>
+                <img src="images/xarelto.jpg" alt="" width="300"/>
+
+                <p><strong>Risperdal</strong></p>
+                <p>Risperdal is used to treat schizophrenia and symptoms of bipolar disorder (manic depression). Risperdal is also used in autistic children to treat symptoms of irritability.
+                Risperdal has been in the news quite a bit because of some fraudulent activity and fines received by Jansen in what and how Risperdal was prescribed by US doctors.</p>
+                <img src="images/risperdal.png" alt="" width="300"/>
+
+                <p>With these two drugs, we proceed to analize all their social media effects and cross it with all known side effects. Then we ran a validation test to see if our findings were significant, from a statistical point of view.</p>
+                <p>So lets move to our results ...</p>
+
+<!--                 <div class='tableau
+                <p><strong>Xarelto</strong></p>Placeholder' style='width: 982px; height: 742px;'>
                     <noscript><a href='#'>
                         <img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;se&#47;seattle_4&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a>
                     </noscript>
@@ -101,20 +160,28 @@ From the market withdrawal of Thalidomide (a sedative causing foetal malformatio
                         <param name='showTabs' value='y' />
                         <param name='bootstrapWhenNotified' value='true' />
                     </object>
-                </div>
+                </div> -->
             </div>
         </div>
 
         <div class="row">
             <div class="col-xs-12">
-                <h2 class="page-header">Conclusion</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <h2 class="page-header">Results</h2>
+                <p>We found new unknown side effects for these 2 drugs:</p>
+                <p><strong>Risperdal</strong></p>
                 <ol>
-                    <li>Conclusion #1</li>
-                    <li>Conclusion #2</li>
-                    <li>Conclusion #3</li>
-                    <li>Conclusion #4</li>
+                    <li>Arthritis</li>
+                    <li>Hair loss</li>
+                    <li>Obesity</li>
                 </ol>
+                <br>
+                <p><strong>Xarelto</strong></p>
+                <ol>
+                    <li>Liver</li>
+                    <li>Hair loss</li>
+                </ol>
+                <br>
+                <p>Even though this is a small finding, it shows how powerfull can be social media. The pharmaceutical can get more unknown side effects investigating people posts and discussions in forums, or at least get a hint on what symptoms are people talking about when they use their products.</p>
             </div>
         </div>
 
