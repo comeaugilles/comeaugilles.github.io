@@ -107,7 +107,7 @@
                 <p>We used 2 techniques for our analysis: </p>
                 <ol>
                     <li>Word Categorization (LDA)</li>
-                    <li>Comparing listed effects vs reported effects</li>
+                    <li>Comparing listed effects vs reported effects (Lexical approach)</li>
                 </ol>
                 <br />
                 <p><strong>Word Categorization (LDA)</strong></p>
@@ -167,21 +167,22 @@
         <div class="row">
             <div class="col-xs-12">
                 <h2 class="page-header">Results</h2>
-                <p>We found new unknown side effects for these 2 drugs:</p>
-                <p><strong>Risperdal</strong></p>
+                <p>The lexical approach is broken into two questions, and was performed against Xarelto and Risperdal, two of the 20 drugs we were evaluating:</p>
+                <br />
+                <p><strong>Validating Labeled Side Effects:</strong></p> 
+                <p>Our method for validating labeled side effects was quite successful. We measured our approach using "Recall" method as the goal was to find whether people were talking about a high proportion of the known side effects on social media. If this wasn't the case, then the dataset would not be useful for trying to predict unlabeled side effects. Our Recall measures for Risperdal and Xarelto respectively were .962 and .935 respectively. From this analysis, we feel confident that people are indeed talking about key side effects of these pharmaceuticals in online and social media.</p>
+                <p><strong>Identifying Unlabeled Side Effects:</strong></p> 
+                <p>The next question was to determine whether we can predict new unlabeled side effects. Applying our term colocation techniques against the corpus, we uncovered a small list of unlabelled side effects. Given the amount of scrutiny of these two pharmaceuticals, this was an acceptable results - we expect that newer pharmaceutials would produce a bigger list.</p>
                 <ol>
-                    <li>Arthritis</li>
-                    <li>Hair loss</li>
-                    <li>Obesity</li>
+                    <li>For Risperdal, we found some interesting side effects that were not listed on Drugs.com side effects. In particular, obesity, arthritis and hair loss. The most interesting of these was arthritis, which we found written up in a medical journal as well: <a href="http://www.ehealthme.com/ds/risperdal/arthritis">http://www.ehealthme.com/ds/risperdal/arthritis</a>. We also found a medical journal citing hair loss in all anti-psychotic medications, like Risperdal: <a href="http://www.ncbi.nlm.nih.gov/pubmed/10798824">http://www.ncbi.nlm.nih.gov/pubmed/10798824</a> We evaluated these effects by using a Fisher Exact tests and very low P-values for each, which makes us believe that these are not simply random anomalies.</li>
+                    <li>For Xarelto, we found unlabeled side effects related to liver problems, and also hair loss. These effects were not listed on drugs.com, however we found this topic being discussed on site: <a href="http://livertox.nih.gov/Rivaroxaban.htm">http://livertox.nih.gov/Rivaroxaban.htm</a>. For hair loss, we found that discussed on a Xarelto lawsuit page: <a href="https://www.xareltocares.com/xarelto-a-truly-dangerous-medication/may-xarelto-cause-hair-loss-and-dry-skin-conditions/">https://www.xareltocares.com/xarelto-a-truly-dangerous-medication/may-xarelto-cause-hair-loss-and-dry-skin-conditions/</a> Again, these results were evaluated by a Fishers Exact test, with very low p-values as the result.</li>
                 </ol>
-                <br>
-                <p><strong>Xarelto</strong></p>
+                <p><strong>Additional Research</strong>: This research is a starting point, but is showing positive results for validating and discovering adverse effects. Further research directions which were prohibitive from barriers both in time and computing power were to:</p>
                 <ol>
-                    <li>Liver</li>
-                    <li>Hair loss</li>
+                    <li>Run the entire list of drugs, or in fact all drugs through this process. This would require access to all of the social media data for these drugs however, as well as cluster of processing computers.</li>
+                    <li>Clean up the lists of adverse effects, and group them for both what part of the body they effect, but also for synonyms. Our results would have been improved by having a cleaned list, but the list includes 31,000 effects and this should be undertaken by people with excellent domain knowledge.</li>
+                    <li>Our methods uncover the postings mentioning adverse effects, there is an additional manual effort required to review all of the postings to further validate the conclusions.</li>
                 </ol>
-                <br>
-                <p>Even though this is a small finding, it shows how powerfull can be social media. The pharmaceutical can get more unknown side effects investigating people posts and discussions in forums, or at least get a hint on what symptoms are people talking about when they use their products.</p>
             </div>
         </div>
 
