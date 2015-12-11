@@ -111,7 +111,10 @@
                 </ol>
                 <br />
                 <p><strong>Word Categorization (LDA)</strong></p>
-                 <p>In our first approach, we tried to see if we could dig into social media data and find what were the most common side effects for a group of specifics drugs. </p><p>Sadly, this approach didn´t work so well, so we did a little literature review about it and we found that there were 3 major articles published about side effects, and they used different techniques:</p>
+                 <p>In our first approach, we tried to see if we could dig into social media data and find what were the most common side effects for a group of specifics drugs. </p>
+                <div class="text-center"><img src="images/mirena_mitro.png" alt="" width="400"/></div>
+                <br>
+                 <p>Sadly, this approach had limited success, so we did a little literature review about it and we found that there were 3 major articles published about side effects, and they used different techniques:</p>
                  <ul>
                     <li>Lexicon-method</li>
                     <li>machine learning</li>
@@ -129,38 +132,16 @@
 
                 <p><strong>Xarelto</strong></p>
                 <p>Xarelto (rivaroxaban) is an anticoagulant (blood thinner) that prevents the formation of blood clots. Xarelto is used to prevent or treat a type of blood clot called deep vein thrombosis (DVT), which can lead to blood clots in the lungs (pulmonary embolism). A DVT can occur after certain types of surgery.</p>
-                <img src="images/xarelto.jpg" alt="" width="300"/>
+                <div class="text-center"><img src="images/xarelto.jpg" alt="" width="250"/></div>
 
                 <p><strong>Risperdal</strong></p>
                 <p>Risperdal is used to treat schizophrenia and symptoms of bipolar disorder (manic depression). Risperdal is also used in autistic children to treat symptoms of irritability.
                 Risperdal has been in the news quite a bit because of some fraudulent activity and fines received by Jansen in what and how Risperdal was prescribed by US doctors.</p>
-                <img src="images/risperdal.png" alt="" width="300"/>
+                <div class="text-center"><img src="images/risperdal.png" alt="" width="250"/></div>
 
                 <p>With these two drugs, we proceed to analize all their social media effects and cross it with all known side effects. Then we ran a validation test to see if our findings were significant, from a statistical point of view.</p>
                 <p>So let's move to our results ...</p>
 
-<!--                 <div class='tableau
-                <p><strong>Xarelto</strong></p>Placeholder' style='width: 982px; height: 742px;'>
-                    <noscript><a href='#'>
-                        <img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;se&#47;seattle_4&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a>
-                    </noscript>
-                    <object class='tableauViz' width='982' height='742' style='display:none;'>
-                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-                        <param name='site_root' value='' />
-                        <param name='name' value='seattle_4&#47;Dashboard1' />
-                        <param name='tabs' value='no' />
-                        <param name='toolbar' value='yes' />
-                        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;se&#47;seattle_4&#47;Dashboard1&#47;1.png' /> 
-                        <param name='animate_transition' value='yes' />
-                        <param name='display_static_image' value='yes' />
-                        <param name='display_spinner' value='yes' />
-                        <param name='display_overlay' value='yes' />
-                        <param name='display_count' value='yes' />
-                        <param name='showVizHome' value='no' />
-                        <param name='showTabs' value='y' />
-                        <param name='bootstrapWhenNotified' value='true' />
-                    </object>
-                </div> -->
             </div>
         </div>
 
@@ -182,6 +163,10 @@
                     <li>For Risperdal, we found some interesting side effects that were not listed on Drugs.com side effects. In particular, obesity, arthritis and hair loss. The most interesting of these was arthritis, which we found written up in a medical journal as well: <a href="http://www.ehealthme.com/ds/risperdal/arthritis">http://www.ehealthme.com/ds/risperdal/arthritis</a>. We also found a medical journal citing hair loss in all anti-psychotic medications, like Risperdal: <a href="http://www.ncbi.nlm.nih.gov/pubmed/10798824">http://www.ncbi.nlm.nih.gov/pubmed/10798824</a> We evaluated these effects by using a Fisher Exact tests and very low P-values for each, which makes us believe that these are not simply random anomalies.</li>
                     <li>For Xarelto, we found unlabeled side effects related to liver problems, and also hair loss. These effects were not listed on drugs.com, however we found this topic being discussed on site: <a href="http://livertox.nih.gov/Rivaroxaban.htm">http://livertox.nih.gov/Rivaroxaban.htm</a>. For hair loss, we found that discussed on a Xarelto lawsuit page: <a href="https://www.xareltocares.com/xarelto-a-truly-dangerous-medication/may-xarelto-cause-hair-loss-and-dry-skin-conditions/">https://www.xareltocares.com/xarelto-a-truly-dangerous-medication/may-xarelto-cause-hair-loss-and-dry-skin-conditions/</a> Again, these results were evaluated by a Fishers Exact test, with very low p-values as the result.</li>
                 </ol>
+<br>
+<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 982px; height: 742px;'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;si&#47;side_effects&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='982' height='742' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='side_effects&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;si&#47;side_effects&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+<br>
+
                 <p><strong>Additional Research</strong>: This research is a starting point, but is showing positive results for validating and discovering adverse effects. Further research directions which were prohibitive from barriers both in time and computing power were to:</p>
                 <ol>
                     <li>Run the entire list of drugs, or in fact all drugs through this process. This would require access to all of the social media data for these drugs however, as well as cluster of processing computers.</li>
